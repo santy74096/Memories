@@ -3,9 +3,9 @@ const app=express();
 const mongoose=require('mongoose');
 const PORT=process.env.PORT || 5000;
 
-const cors = require('cors')    //cors will allow to fetch data from frontend(at 3000) from backend(5000) sice we are working on diff ports
+//const cors = require('cors')    //cors will allow to fetch data from frontend(at 3000) from backend(5000) sice we are working on diff ports
 
-app.use(cors()) // Use this after the variable declaration
+//app.use(cors()) // Use this after the variable declaration
 
 
 

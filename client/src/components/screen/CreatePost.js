@@ -18,7 +18,7 @@ function CreatePost() {
         //if we get the url then we will furthur make req from server
         if(url){
             //req server to upload createPost data
-            fetch("http://localhost:5000/createPost", {   
+            fetch("/createPost", {   
                 method : "post",
                 headers:{
                     "Content-Type" : "application/json",
