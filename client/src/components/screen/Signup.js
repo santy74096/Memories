@@ -85,8 +85,8 @@ const Signup = () =>{
             <div className="card auth-card">
                 <h2>Instagram</h2>
                 <input type="text" placeholder="name" value={name} onChange={(e) => setName(e.target.value)} />
-                <input type="text" placeholder="email" value={password} onChange={(e) => setPassword(e.target.value)} />
-                <input type="text" placeholder="password" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input type="text" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input type="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} />
 
                 <div className="file-field input-field">
                     <div className="btn blue darken-2" >

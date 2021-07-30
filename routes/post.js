@@ -9,6 +9,7 @@ router.get('/allpost',requireLogin,(req,res) => {
     Post.find()    //no condition since we want all post
     .populate("postedBy","_id name")    //this method will provide data contained in postedBy,second arg is for select field i.e which fields we want to get
     .populate("comments.postedBy","_id name")
+    .sort('-createdAt')  //createdAt will be created by timestamps:true,  - is for decreasing  order
     /*
         The properties that we want to use .populate() on are properties that have a type of mongoose.Schema.Types.ObjectId. 
         This tells Mongoose “Hey, I’m gonna be referencing other documents from other collections”. The next part of that property 
@@ -31,6 +32,7 @@ router.get('/getsubpost',requireLogin,(req,res) => {
     Post.find({postedBy:{$in:req.user.following}})    
     .populate("postedBy","_id name")
     .populate("comments.postedBy","_id name")
+    .sort('-createdAt')
     .then(posts => {
         res.json({posts})
     })

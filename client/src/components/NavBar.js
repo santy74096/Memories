@@ -11,10 +11,10 @@ function NavBar() {
     const renderList = () => {
         if(state){  //if we have user then render profile and create post
             return [
-                <li><Link to="/createpost">Create Post</Link></li>,
-                <li><Link to="/profile">Profile</Link></li>,
-                <li><Link to="/myfollowerspost">My following posts</Link></li>,
-                <li>
+                <li key='2'> <Link to="/createpost">Create Post</Link> </li>,
+                <li key='3'><Link to="/profile">Profile</Link></li>,
+                <li key='4'><Link to="/myfollowerspost">My following posts</Link></li>,
+                <li key='5'>
                     <button className="btn waves-effect waves-light  #e53935 red darken-1" 
                     onClick={() => {
                         localStorage.clear();   //clear all local storage containig user token and user info
@@ -27,8 +27,8 @@ function NavBar() {
         }
         else{   
             return [
-                <li><Link to="/signup">Signup</Link></li>,
-                <li><Link to="/signin">Signin</Link></li>
+                <li key='6'><Link to="/signup">Signup</Link></li>,
+                <li key='7'><Link to="/signin">Signin</Link></li>
             ]
         }
     }

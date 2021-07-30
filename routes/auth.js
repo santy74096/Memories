@@ -10,10 +10,16 @@ const {JWT_SECRET} = require('../config/key'); //secret key
 
 const requireLogin = require('../middleware/requireLogin');
 
+//email verification for forgot password
+// const nodemailer =require('nodemailer');
+// const sendgridTransport = require('nodemailer-sendgrid-transport')
+//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
 
-router.get('/',(req,res) =>{
-    res.send('this is route')
-})
+
+
+// router.get('/',(req,res) =>{
+//     res.send('this is route')
+// })
 
 //to check howtoken is working
 // router.get('/protected',requireLogin,(req,res) =>{
